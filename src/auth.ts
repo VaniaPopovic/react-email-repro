@@ -4,6 +4,7 @@ import { renderAsync } from "@react-email/render";
 import NextAuth from "next-auth";
 import type { EmailConfig } from "@auth/core/providers/email";
 import VercelInviteUserEmail from "./vercel-invite-user";
+import { MyAdapter } from "./adapter";
 
 const ResendProvider: EmailConfig = {
   id: "email",
@@ -30,16 +31,6 @@ const ResendProvider: EmailConfig = {
   },
 };
 
-export type { Session } from "next-auth";
-
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id: string;
-    } & DefaultSession["user"];
-  }
-}
-
 export const {
   handlers: { GET, POST },
   auth,
@@ -47,6 +38,7 @@ export const {
   signOut,
 } = NextAuth({
   debug: true,
+  adapter: MyAdapter({}),
   session: {
     strategy: "jwt",
   },

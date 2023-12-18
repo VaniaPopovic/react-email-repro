@@ -3,5 +3,5 @@ import { renderAsync } from "@react-email/render";
 
 export default async function Home() {
   const email = await renderAsync(VercelInviteUserEmail({}));
-  return <div>{JSON.stringify(email)}</div>;
+  return <div dangerouslySetInnerHTML={{ __html: email }}></div>;
 }
