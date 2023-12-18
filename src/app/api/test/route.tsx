@@ -4,6 +4,8 @@ import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
+// this works as expected
+
 export async function GET(req: Request) {
   const html = await renderAsync(VercelInviteUserEmail({}));
   console.log(html);
