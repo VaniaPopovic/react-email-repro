@@ -109,9 +109,7 @@ export const VercelInviteUserEmail = ({
             </Section>
             <Section className="text-center mt-[32px] mb-[32px]">
               <Button
-                pX={20}
-                pY={12}
-                className="bg-[#000000] rounded text-white text-[12px] font-semibold no-underline text-center"
+                className="bg-[#000000] rounded text-white text-[12px] font-semibold no-underline text-center px-[20px] py-[12px]"
                 href={inviteLink}
               >
                 Join the team
@@ -131,8 +129,8 @@ export const VercelInviteUserEmail = ({
               located in{" "}
               <span className="text-black">{inviteFromLocation}</span>. If you
               were not expecting this invitation, you can ignore this email. If
-              you are concerned about your account's safety, please reply to
-              this email to get in touch with us.
+              you are concerned about your accounts safety, please reply to this
+              email to get in touch with us.
             </Text>
           </Container>
         </Body>
