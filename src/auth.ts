@@ -24,7 +24,7 @@ const ResendProvider: EmailConfig = {
     const emailHtml = await renderAsync(
       VercelInviteUserEmail({ inviteLink: url, username: email })
     );
-
+    //This works on dev but not in build time
     console.log(emailHtml);
 
     // send email using email provider such as SendGrid

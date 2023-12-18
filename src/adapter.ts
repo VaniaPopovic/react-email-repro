@@ -5,12 +5,11 @@ import {
   VerificationToken,
 } from "@auth/core/adapters";
 
-// 2. A function that returns an object. Official adapters use this pattern.
-export function MyAdapter(config: any): Adapter {
-  // Instantiate a client/ORM here with the provided config, or pass it in as a parameter.
-  // Usually, you might already have a client instance elsewhere in your application,
-  // so you should only create a new instance if you need to or you don't have one.
+//NOTE:
 
+// THIS IS A MOCK ADAPTER FOR TESTING PURPOSES ONLY
+
+export function MyAdapter(config: any): Adapter {
   return {
     async createUser(data) {
       const id = crypto.randomUUID();
